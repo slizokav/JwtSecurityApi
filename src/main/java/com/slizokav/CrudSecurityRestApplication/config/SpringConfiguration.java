@@ -16,7 +16,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SpringConfiguration {
 
 
-    private PersonUserDetailsService personUserDetailsService;
+    private final PersonUserDetailsService personUserDetailsService;
 
     @Autowired
     public SpringConfiguration(PersonUserDetailsService personUserDetailsService) {
@@ -27,8 +27,9 @@ public class SpringConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests((request) -> request
+                        .requestMatchers("/admin").hasRole("ADMIN")
                         .requestMatchers("/", "/login", "/registration").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().hasAnyRole("USER","ADMIN")
                 )
                 .formLogin((login) -> login
                         .loginPage("/login").loginProcessingUrl("/auth").defaultSuccessUrl("/admin")

@@ -23,6 +23,7 @@ public class PersonService {
 
 
     public void create(Person person) {
+        person.setRole("ROLE_USER");
         person.setPassword(passwordEncoder.encode(person.getPassword()));
         personRepository.save(person);
     }

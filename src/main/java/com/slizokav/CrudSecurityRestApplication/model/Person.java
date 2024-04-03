@@ -24,6 +24,9 @@ public class Person {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "role")
+    private String role;
+
     public Person(String username, String password, String description) {
         this.username = username;
         this.password = password;

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 
-    private PersonService personService;
+    private final PersonService personService;
 
     @Autowired
     public MainController(PersonService personService) {
