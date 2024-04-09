@@ -41,7 +41,7 @@ public class MainController {
     @PostMapping("/registration")
     public String registration(@ModelAttribute("person") Person person) {
         personService.create(person);
-        return "redirect:/main";
+        return "redirect:/";
     }
 
 }
