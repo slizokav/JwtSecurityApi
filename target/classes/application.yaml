@@ -5,5 +5,3 @@ spring:
     username: postgres
     password: postgres
     url: jdbc:postgresql://localhost:5432/postgres
-
-jwt_secret: J37$Iv9*As6@

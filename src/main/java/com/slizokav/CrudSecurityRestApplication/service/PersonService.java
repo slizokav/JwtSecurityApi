@@ -10,9 +10,7 @@ import java.util.Optional;
 
 @Service
 public class PersonService {
-
     private final PersonRepository personRepository;
-
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
@@ -21,11 +19,9 @@ public class PersonService {
         this.passwordEncoder = passwordEncoder;
     }
 
-
     public void create(Person person) {
         person.setRole("ROLE_USER");
         person.setPassword(passwordEncoder.encode(person.getPassword()));
         personRepository.save(person);
     }
-
 }

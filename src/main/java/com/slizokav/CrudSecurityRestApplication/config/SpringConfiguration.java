@@ -1,26 +1,30 @@
 package com.slizokav.CrudSecurityRestApplication.config;
 
+import com.slizokav.CrudSecurityRestApplication.security.JWTUtil;
 import com.slizokav.CrudSecurityRestApplication.service.PersonUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SpringConfiguration {
-
-
     private final PersonUserDetailsService personUserDetailsService;
+    private final JWTFilter jwtFilter;
 
     @Autowired
-    public SpringConfiguration(PersonUserDetailsService personUserDetailsService) {
+    public SpringConfiguration(PersonUserDetailsService personUserDetailsService, JWTFilter jwtFilter) {
         this.personUserDetailsService = personUserDetailsService;
+        this.jwtFilter = jwtFilter;
     }
 
     @Bean
@@ -34,7 +38,9 @@ public class SpringConfiguration {
                 .formLogin((login) -> login
                         .loginPage("/login").loginProcessingUrl("/auth").defaultSuccessUrl("/admin")
                 )
-                .logout((logout) -> logout.permitAll().logoutUrl("/logout").logoutSuccessUrl("/"));
+                .logout((logout) -> logout.permitAll().logoutUrl("/logout").logoutSuccessUrl("/"))
+                .sessionManagement((sessionManagement) -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
@@ -49,4 +55,8 @@ public class SpringConfiguration {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public AuthenticationManager authenticationManager() throws Exception {
+        return authenticationManager();
+    }
 }

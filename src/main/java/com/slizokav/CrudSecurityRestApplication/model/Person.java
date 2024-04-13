@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Person {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,17 +20,8 @@ public class Person {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "description")
-    private String description;
-
     @Column(name = "role")
     private String role;
-
-    public Person(String username, String password, String description) {
-        this.username = username;
-        this.password = password;
-        this.description = description;
-    }
 
     public Person(String username, String password) {
         this.username = username;
