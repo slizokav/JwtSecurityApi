@@ -32,6 +32,7 @@ public class SpringConfiguration {
 
         http
                 .csrf((csrf) -> csrf.disable())
+                .cors((cors) -> cors.disable())
                 .authorizeHttpRequests((request) -> request
                         .requestMatchers("/auth", "/registration").permitAll()
                         .requestMatchers("/admin").hasRole("ADMIN")

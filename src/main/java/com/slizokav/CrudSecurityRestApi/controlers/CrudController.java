@@ -24,9 +24,9 @@ public class CrudController {
         this.modelMapper = modelMapper;
     }
 
-    @GetMapping("testUser")
+    @GetMapping("/test")
     public String mainPage() {
-        return "testUser";
+        return "test";
     }
 
     @GetMapping("/admin")
