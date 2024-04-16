@@ -1,6 +1,7 @@
 package com.slizokav.CrudSecurityRestApplication.security;
 
 import com.slizokav.CrudSecurityRestApplication.model.Person;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -9,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+@Getter
 public class PersonUserDetails implements UserDetails {
     private final Person person;
 
@@ -23,12 +25,12 @@ public class PersonUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-       return person.getPassword();
+        return person.getPassword();
     }
 
     @Override
     public String getUsername() {
-       return person.getUsername();
+        return person.getUsername();
     }
 
     @Override
@@ -51,7 +53,4 @@ public class PersonUserDetails implements UserDetails {
         return true;
     }
 
-    public Person getPerson(){
-        return person;
-    }
 }

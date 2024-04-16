@@ -35,7 +35,7 @@ public class JWTFilter extends OncePerRequestFilter {
             String jwt = authHeader.substring(7);
 
             if (jwt.isBlank()) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid JWT token");
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Невалидный JWT токен");
             } else {
                 try {
                     String username = jwtUtil.validateToken(jwt);
@@ -46,7 +46,7 @@ public class JWTFilter extends OncePerRequestFilter {
                         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                     }
                 } catch (JWTVerificationException e) {
-                    response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT token");
+                    response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Невалидный JWT токен");
                 }
             }
 
