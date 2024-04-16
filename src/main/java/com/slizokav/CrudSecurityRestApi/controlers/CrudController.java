@@ -1,10 +1,10 @@
-package com.slizokav.CrudSecurityRestApplication.controlers;
+package com.slizokav.CrudSecurityRestApi.controlers;
 
-import com.slizokav.CrudSecurityRestApplication.dto.response.BodyResponse;
-import com.slizokav.CrudSecurityRestApplication.dto.PersonDto;
-import com.slizokav.CrudSecurityRestApplication.model.Person;
-import com.slizokav.CrudSecurityRestApplication.security.JWTUtil;
-import com.slizokav.CrudSecurityRestApplication.service.PersonService;
+import com.slizokav.CrudSecurityRestApi.dto.response.BodyResponse;
+import com.slizokav.CrudSecurityRestApi.dto.PersonDto;
+import com.slizokav.CrudSecurityRestApi.model.Person;
+import com.slizokav.CrudSecurityRestApi.security.JWTUtil;
+import com.slizokav.CrudSecurityRestApi.service.PersonService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

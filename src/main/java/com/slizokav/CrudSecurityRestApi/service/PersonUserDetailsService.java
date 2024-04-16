@@ -1,8 +1,8 @@
-package com.slizokav.CrudSecurityRestApplication.service;
+package com.slizokav.CrudSecurityRestApi.service;
 
-import com.slizokav.CrudSecurityRestApplication.model.Person;
-import com.slizokav.CrudSecurityRestApplication.repositories.PersonRepository;
-import com.slizokav.CrudSecurityRestApplication.security.PersonUserDetails;
+import com.slizokav.CrudSecurityRestApi.model.Person;
+import com.slizokav.CrudSecurityRestApi.repositories.PersonRepository;
+import com.slizokav.CrudSecurityRestApi.security.PersonUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

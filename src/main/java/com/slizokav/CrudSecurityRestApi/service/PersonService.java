@@ -1,7 +1,7 @@
-package com.slizokav.CrudSecurityRestApplication.service;
+package com.slizokav.CrudSecurityRestApi.service;
 
-import com.slizokav.CrudSecurityRestApplication.model.Person;
-import com.slizokav.CrudSecurityRestApplication.repositories.PersonRepository;
+import com.slizokav.CrudSecurityRestApi.model.Person;
+import com.slizokav.CrudSecurityRestApi.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

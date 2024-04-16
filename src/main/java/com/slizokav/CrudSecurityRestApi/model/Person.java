@@ -1,4 +1,4 @@
-package com.slizokav.CrudSecurityRestApplication.model;
+package com.slizokav.CrudSecurityRestApi.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

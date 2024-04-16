@@ -1,15 +1,14 @@
-package com.slizokav.CrudSecurityRestApplication.config;
+package com.slizokav.CrudSecurityRestApi.config;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.slizokav.CrudSecurityRestApplication.security.JWTUtil;
-import com.slizokav.CrudSecurityRestApplication.service.PersonUserDetailsService;
+import com.slizokav.CrudSecurityRestApi.security.JWTUtil;
+import com.slizokav.CrudSecurityRestApi.service.PersonUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;

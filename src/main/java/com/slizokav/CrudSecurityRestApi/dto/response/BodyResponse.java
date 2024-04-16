@@ -1,4 +1,4 @@
-package com.slizokav.CrudSecurityRestApplication.dto.response;
+package com.slizokav.CrudSecurityRestApi.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

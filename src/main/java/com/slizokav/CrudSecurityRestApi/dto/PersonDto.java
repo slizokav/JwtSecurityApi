@@ -1,6 +1,5 @@
-package com.slizokav.CrudSecurityRestApplication.dto;
+package com.slizokav.CrudSecurityRestApi.dto;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

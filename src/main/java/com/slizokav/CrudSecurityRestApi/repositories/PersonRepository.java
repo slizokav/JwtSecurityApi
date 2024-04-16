@@ -1,6 +1,6 @@
-package com.slizokav.CrudSecurityRestApplication.repositories;
+package com.slizokav.CrudSecurityRestApi.repositories;
 
-import com.slizokav.CrudSecurityRestApplication.model.Person;
+import com.slizokav.CrudSecurityRestApi.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

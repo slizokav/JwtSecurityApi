@@ -1,8 +1,7 @@
-package com.slizokav.CrudSecurityRestApplication.security;
+package com.slizokav.CrudSecurityRestApi.security;
 
-import com.slizokav.CrudSecurityRestApplication.model.Person;
+import com.slizokav.CrudSecurityRestApi.model.Person;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

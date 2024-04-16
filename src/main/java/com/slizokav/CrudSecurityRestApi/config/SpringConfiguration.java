@@ -1,7 +1,6 @@
-package com.slizokav.CrudSecurityRestApplication.config;
+package com.slizokav.CrudSecurityRestApi.config;
 
-import com.slizokav.CrudSecurityRestApplication.security.JWTUtil;
-import com.slizokav.CrudSecurityRestApplication.service.PersonUserDetailsService;
+import com.slizokav.CrudSecurityRestApi.service.PersonUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

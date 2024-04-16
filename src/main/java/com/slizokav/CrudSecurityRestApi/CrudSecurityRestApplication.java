@@ -1,4 +1,4 @@
-package com.slizokav.CrudSecurityRestApplication;
+package com.slizokav.CrudSecurityRestApi;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
