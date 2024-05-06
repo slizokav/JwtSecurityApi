@@ -34,14 +34,10 @@ public class SpringConfiguration {
                 .csrf((csrf) -> csrf.disable())
                 .cors((cors) -> cors.disable())
                 .authorizeHttpRequests((request) -> request
-                        .requestMatchers("/auth", "/registration").permitAll()
+                        .requestMatchers("/auth", "/registration", "/test").permitAll()
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().hasAnyRole("USER", "ADMIN")
                 )
-                .formLogin((login) -> login
-                        .loginPage("/login").loginProcessingUrl("/auth").defaultSuccessUrl("/admin")
-                )
-                .logout((logout) -> logout.permitAll().logoutUrl("/logout").logoutSuccessUrl("/"))
                 .sessionManagement((sessionManagement) -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
