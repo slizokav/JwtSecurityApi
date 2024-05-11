@@ -1,8 +1,8 @@
-package com.slizokav.CrudSecurityRestApi.config;
+package com.slizokav.JwtSecurityApi.config;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.slizokav.CrudSecurityRestApi.security.JWTUtil;
-import com.slizokav.CrudSecurityRestApi.service.PersonUserDetailsService;
+import com.slizokav.JwtSecurityApi.security.JWTUtil;
+import com.slizokav.JwtSecurityApi.service.PersonUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

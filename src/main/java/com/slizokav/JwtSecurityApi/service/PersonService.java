@@ -1,7 +1,7 @@
-package com.slizokav.CrudSecurityRestApi.service;
+package com.slizokav.JwtSecurityApi.service;
 
-import com.slizokav.CrudSecurityRestApi.model.Person;
-import com.slizokav.CrudSecurityRestApi.repositories.PersonRepository;
+import com.slizokav.JwtSecurityApi.model.Person;
+import com.slizokav.JwtSecurityApi.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

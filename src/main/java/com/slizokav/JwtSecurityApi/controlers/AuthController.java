@@ -1,8 +1,8 @@
-package com.slizokav.CrudSecurityRestApi.controlers;
+package com.slizokav.JwtSecurityApi.controlers;
 
-import com.slizokav.CrudSecurityRestApi.dto.response.BodyResponse;
-import com.slizokav.CrudSecurityRestApi.dto.PersonDto;
-import com.slizokav.CrudSecurityRestApi.security.JWTUtil;
+import com.slizokav.JwtSecurityApi.dto.response.BodyResponse;
+import com.slizokav.JwtSecurityApi.dto.PersonDto;
+import com.slizokav.JwtSecurityApi.security.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

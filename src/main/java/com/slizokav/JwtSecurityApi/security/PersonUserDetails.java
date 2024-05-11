@@ -1,6 +1,6 @@
-package com.slizokav.CrudSecurityRestApi.security;
+package com.slizokav.JwtSecurityApi.security;
 
-import com.slizokav.CrudSecurityRestApi.model.Person;
+import com.slizokav.JwtSecurityApi.model.Person;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

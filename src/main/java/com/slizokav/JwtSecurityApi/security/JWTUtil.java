@@ -1,4 +1,4 @@
-package com.slizokav.CrudSecurityRestApi.security;
+package com.slizokav.JwtSecurityApi.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
