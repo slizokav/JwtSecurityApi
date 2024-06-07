@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CrudSecurityRestApplication" />
         <module name="CrudSecurityRestApi" />
+        <module name="JwtSecurityApi" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CrudSecurityRestApi" options="-parameters" />
+      <module name="JwtSecurityApi" options="-parameters" />
     </option>
   </component>
 </project>
